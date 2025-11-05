@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mzh服务器博客</title>
+  <!-- 主题样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- 代码高亮样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-tomorrow.css">
+  
+  <!-- 天蓝色主题样式 -->
+  <style>
+    :root {
+      --theme-color: #4fc0e8; /* 天蓝色主色调 */
+      --sidebar-bg-color: #f0f9ff; /* 侧边栏背景色（浅蓝） */
+      --sidebar-link-active-color: var(--theme-color); /* 激活链接色 */
+      --code-bg-color: #eef7fb; /* 代码块背景色 */
+      --text-color: #333; /* 保持文字可读性 */
+    }
+    
+    /* 补充覆盖部分元素样式 */
+    .sidebar {
+      background-color: var(--sidebar-bg-color);
+    }
+    .app-nav a.active {
+      color: var(--theme-color);
+      border-bottom-color: var(--theme-color);
+    }
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3 {
+      color: var(--theme-color);
+    }
+    .sidebar-nav li.active > a {
+      color: var(--theme-color);
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      name: "mzh服务器博客",
+      repo: '',
+      loadSidebar: true,
+      maxLevel: 3,
+      subMaxLevel: 2,
+      homepage: 'README.md',
+      auto2top: true,
+      search: {
+        placeholder: '搜索文章...',
+        noData: '未找到结果',
+        depth: 3
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-html.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+</body>
+</html>
